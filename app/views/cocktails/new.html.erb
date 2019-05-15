@@ -9,9 +9,11 @@
     <%= f.input :photo_cache, as: :hidden %>
   </h5>
   </%>
+  <div class="d-inline">
   <%= f.submit "Add cocktail", class: "btn btn-warning m-3" %>
 <% end %>
 
 <%= link_to "All cocktails", cocktails_path, class: "btn btn-primary m-3" %>
+</div>
 
 </div>
