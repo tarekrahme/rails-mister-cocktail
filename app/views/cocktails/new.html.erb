@@ -1,7 +1,13 @@
-<h1>New Cocktails</h1>
+<div class = "container">
+<%= image_tag "https://images.unsplash.com/photo-1470338745628-171cf53de3a8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80", alt: "Le Wagon", width: 300, class: "col-3 align-self-center" %>
+
+<h1 class = "text-white">New Cocktail</h1>
 <%= simple_form_for [@cocktail] do |f| %>
-  <%= f.input :name %>
+  <h5 class = "text-white"> <%= f.input :name %></h5>
+  </%>
   <%= f.submit "Add cocktail", class: "btn btn-warning m-3" %>
 <% end %>
 
 <%= link_to "All cocktails", cocktails_path, class: "btn btn-primary m-3" %>
+
+</div>

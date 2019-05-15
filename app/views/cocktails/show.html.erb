@@ -1,8 +1,13 @@
-<h1> 🍹 <%= @cocktail.name %></h1>
+<div class = "container">
+<%= image_tag "https://images.unsplash.com/photo-1517644493876-7864565e3bf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80", alt: "Le Wagon", width: 300 %>
+<h1 class = "text-white" > 🍹 <%= @cocktail.name %></h1>
 <h3 class = "m-3 text-primary">Ingredients:</h3>
 <ul>
 <h2> <% @cocktail.doses.each do |dose| %> </h2>
-  <li> <%= dose.ingredient.name.capitalize %> </li>
+  <li class = "text-white"> <%= dose.ingredient.name.capitalize %> </li>
   <% end %>
 </ul>
 <%= link_to "Add a dose", new_cocktail_dose_path(@cocktail), class: "btn btn-info m-3"%>
+
+<%= link_to "All cocktails", cocktails_path, class: "btn btn-success m-1"%>
+</div>
