@@ -1,4 +1,15 @@
 
+@keyframes example {
+    0%   {background-color: black;}
+    33%  {background-color: yellow;}
+    66%  {background-color: blue;}
+    100%   {background-color: black;}
+}
+
+/* The element to apply the animation to */
 body {
-  background-color: #2E282A;
+    background-color: red;
+    animation-name: example;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
 }
