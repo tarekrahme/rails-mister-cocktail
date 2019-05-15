@@ -3,7 +3,11 @@
 
 <h1 class = "text-white">New Cocktail</h1>
 <%= simple_form_for [@cocktail] do |f| %>
-  <h5 class = "text-white"> <%= f.input :name %></h5>
+  <h5 class = "text-white">
+    <%= f.input :name %>
+    <%= f.input :photo %>
+    <%= f.input :photo_cache, as: :hidden %>
+  </h5>
   </%>
   <%= f.submit "Add cocktail", class: "btn btn-warning m-3" %>
 <% end %>
