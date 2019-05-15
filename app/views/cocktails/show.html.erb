@@ -5,6 +5,7 @@
 <ul>
 <h2> <% @cocktail.doses.each do |dose| %> </h2>
   <li class = "text-white"> <%= dose.ingredient.name.capitalize %> </li>
+  <p class = "text-white"> <%=   dose.description %> </p>
   <% end %>
 </ul>
 <%= link_to "Add a dose", new_cocktail_dose_path(@cocktail), class: "btn btn-info m-3"%>
