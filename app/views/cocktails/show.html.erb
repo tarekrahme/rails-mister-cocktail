@@ -1,8 +1,8 @@
 
 <div class = "container">
-<div class="card-trip">
-  <%= cl_image_tag @cocktail.photo, height: 600, width: 400, crop: :fit %>
-  <div class="card-trip-infos">
+<div class="card-trip bg-dark">
+  <%= cl_image_tag @cocktail.photo, crop: :mfit %>
+  <div class="card-trip-infos bg-dark text-white">
     <div>
       <h1>🍹 <%= @cocktail.name %></h1>
       <h4>Ingredients:</h4>
@@ -16,7 +16,7 @@
     <h2 class="card-trip-pricing">Prepared by TR</h2>
   </div>
 </div>
-<%= link_to "Add a dose", new_cocktail_dose_path(@cocktail), class: "btn btn-info m-3"%>
+<%= link_to "Add ingredients", new_cocktail_dose_path(@cocktail), class: "btn btn-info m-3"%>
 
 <%= link_to "All cocktails", cocktails_path, class: "btn btn-success m-1"%>
 </div>

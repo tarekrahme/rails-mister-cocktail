@@ -1,10 +1,10 @@
 <div class="container">
   <div class="banner " style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1482112048165-dd23f81c367d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80)">
     <div class="container text-white">
-      <h1>Le BAR brings <strong>bartending skills</strong> to <strong>creative people</strong>!</h1>
-      <p>Change your life and learn to make cocktails at one of our campuses around the world</p>
+      <h1>Find and create the best cocktails recipes !</strong>!</h1>
+      <p>Learn to make cocktails</p>
       <div class="sticky-top ">
-        <a href="https://humus101.com/EN/" class = "btn btn-success">CLICK HERE TO JOIN US NOW !!!!!! </a>
+        <a href="https://unsplash.com/search/photos/cocktail" class = "btn btn-success" target="_blank">Click here for visual inspiration... </a>
       </div>
     </div>
   </div>
@@ -12,13 +12,16 @@
 <br>
 
 
-  <h1 class = "text-white">Your Cocktails:</h1>
+  <h1 class = "text-white">Cocktails:</h1>
   <div class="cards">
   <% @cocktails.each do |cocktail| %>
-    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path cocktail.photo, height: 300, width: 400, crop: :fill unless cocktail.photo.blank? %>')">
-    🍹<%= link_to cocktail.name, cocktail_path(cocktail), class: "text-white" %>
-    </div>
+    <%= link_to cocktail_path(cocktail) do %>
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path cocktail.photo, height: 300, width: 400, crop: :mfit unless cocktail.photo.blank? %>')">
+        <div class="link_color"> 🍹 <%= cocktail.name %></div>
+      </div>
+    <% end %>
   <% end %>
-  <%= link_to "➕🍹", new_cocktail_path, class: "card-category"%>
+  <%= link_to "🍹✚🍹", new_cocktail_path, class: "card-category link_color"%>
   </div>
 </div>
+
