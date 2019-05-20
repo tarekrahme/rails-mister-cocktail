@@ -19,16 +19,21 @@
   }
 }
 
-.link_color:hover {
-    text-decoration: none;
+.link_color{
+  &:hover {
+    text-decoration: none !important;
     color: white;
   }
+}
 
 .cards {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 24px;
   height: 150px;
+  a {
+    text-decoration: none !important;
+  }
   &:hover {
   text-decoration: none;
 }
